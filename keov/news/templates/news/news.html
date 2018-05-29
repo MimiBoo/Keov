@@ -1,6 +1,13 @@
+<title>Keov</title>
 {% extends 'news/home.html' %}
 
 {% block content %}
+  <h1>Keov</h1>
+  <form  action="" method="GET">
+    <input type="text" name="q" placeholder="Search posts">
+    <input type="submit" value="Search">
+
+  </form>
   {% for post in object_list %}
     <h4>{{ post.updated |date:"Y-m-d" }}<a href="/news/{{ post.id }}"> {{ post.title }} </a></h4>
   {% endfor %}
